@@ -1,0 +1,23 @@
+{
+  "name": "angular-basic",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "~1.2.12-build.2226",
+    "angular-route": "~1.2.12-build.2226",
+    "bootstrap": "^3.3.6",
+    "angular-bootstrap": "^1.1.2"
+  },
+  "devDependencies": {},
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

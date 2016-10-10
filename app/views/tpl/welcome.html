@@ -1,0 +1,36 @@
+<div class="yellow" ng-controller="ActiveCtrl">
+    <p style="text-align: center;padding-top:20px;"><img src="../app/images/logo.png" alt="" style="width: 80px;"></p>
+    <h2  style="font-size:2.2rem;color:#eb4b31;text-align:center;font-weight:bold">关爱残障群体 广州残联爱心充值站
+
+    </h2>
+    <!-- <div class="banner">
+         <img src="img/banner01.png" alt="">
+          <img ng-src="{{active.backgroundImage}}" alt="">
+    </div> -->
+    <div class="photo">
+        <form action="" name="myForm" >
+            <p>
+                <input type="text"  placeholder="残疾人证编号" class="photo_num" ng-model="user.num" name="num" required/>
+            </p>
+            <p ng-show="myForm.num.$error.required && !myForm.num.$pristine" style="color: red">编号不能为空！</p>
+            <!--<p ng-show="myForm.num.$invalid && !myForm.num.$pristine" style="color: red">编号不能为空！</p>-->
+            <p>
+                <input type="text"  placeholder="姓名" class="photo_num" ng-model="user.name" name="name" required/>
+            </p>
+            <p ng-show="myForm.name.$error.required && !myForm.name.$pristine" style="color: red">姓名不能为空！</p>
+            <!--<p ng-show="myForm.name.$invalid && !myForm.name.$pristine" style="color: red">姓名不能为空！</p>-->
+            <p>
+                <input type="text" placeholder="你的手机号码" class="photo_num" ng-model="user.mobile" name="phone" ng-minlength="11" ng-pattern="/^1[34578]\d{9}$/" ng-change="change()"  required/>
+            </p>
+            <p ng-show="myForm.phone.$error.required && !myForm.phone.$pristine" style="color: red">手机号码不能为空！</p>
+            <p ng-show="myForm.phone.$invalid && !myForm.phone.$pristine" style="color: red">手机号码不合法！</p>
+            <p ng-show="errorMessage && myForm.phone.$valid && isShow"   style="color: red">{{errorMessage}}</p>
+            <p>
+                <button class="lq_btn" ng-click="postdata()" ng-disabled="myForm.$invalid" ng-class="state?'lq_btn':'lq_state'">{{state?'充值话费':'正在充值..'}}</button>
+            </p>
+            <p><button class="lq_btn" ng-disabled="myForm.$invalid" ng-click="postdata()">充值流量</button></p>
+        </form>
+    </div>
+
+</div>
+
